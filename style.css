@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+:root{
+    --bg-dark:rgb(0, 61, 0);
+    --light-green:rgb(61, 202, 5);
+    --yellow:rgb(255, 165, 31);
+    --white:white;
+    --transparent:rgba(255, 255, 255, 0.062);
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background-color:var(--bg-dark);
+    color:white;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:3rem;
+    position: relative;
+}
+
+.modals{
+    padding:1.5rem;
+    width:85%;
+    gap:1rem;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 0.1rem solid rgb(255, 165, 31);
+    border-radius: 0.5rem;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+.modal{
+    padding:1rem;
+    border: 0.1rem solid var(--yellow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: var(--bg-dark);
+    color:var(--yellow);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal:hover{
+    box-shadow: inset 0px 0px 5px var(--bg-dark);
+    border: none;
+    background-color: var(--light-green);
+    color:var(--bg-dark);
+    font-weight: 600;
+}
+
+.modal-container{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.562);
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden;
+}
+
+.actual-modal{
+    color: var(--bg-dark);
+    position: relative;
+    margin:2rem;
+    /* height:40%; */
+    width:22rem;
+    background-color: var(--yellow);
+    filter: brightness(85%);
+    border-radius: 0.5rem;
+    padding:2rem;
+    display:flex;
+    gap:1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0px 0px 2px var(--bg-dark);
+    visibility: hidden;
+    border: 0.1rem solid var(--light-green);
+}
+
+.x{
+    position: absolute;
+    top:-1.1rem;
+    right:-1.1rem;
+    font-size: 1.3rem;
+    color:var(--yellow);
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid var(--light-green);
+    border-radius: 50%;
+    background-color: black;
+}
+
+.title{
+    flex:0.1;
+}
+
+.top{
+    flex: 0.8;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.bottom{
+    flex: 0.1;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap:2rem;
+    justify-content: right;
+}
+
+.bottom button{
+    padding:0.5rem  0.8rem;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:var(--yellow);
+    border-radius: 0.5rem;
+    /* transition: all 0.2s ease-in; */
+    cursor: pointer;
+    border: 0.03rem solid var(--light-green);
+}
+
+.bottom button:hover{
+    /* background-color: transparent; */
+    color:var(--white);
+    font-weight: 500;
+}
